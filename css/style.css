@@ -83,6 +83,7 @@ p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
+  margin: auto;
 }
 
 a {
@@ -93,10 +94,11 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 18px;
+  font-style: normal;
+  font-size: 36px;
   color: #f3f3f3;
-  line-height: 28px;
+  line-height: 48px;
+  margin: auto;
 }
 
 #skills-h3 {
@@ -129,6 +131,10 @@ a {
 
 /* TODO: Replace with image later */
 #header {
+  background-image: url(copper.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: #484848;
 }
 
@@ -204,6 +210,10 @@ span {
   height: 400px;
   width: 100%;
   padding-bottom: 5%;
+}
+
+#content {
+  background-color: #f5ae23;
 }
 
 @media only screen and (min-width: 750px) {

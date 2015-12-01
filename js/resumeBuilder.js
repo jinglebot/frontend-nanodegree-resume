@@ -12,6 +12,16 @@ var bio = {
 		"twitter": "@jinglebot",
 		"location": "Dublin, California"
 	},
+// 	"footercontacts": {
+// 		"mobile": "<a href="#" class="icon-alone">
+//   <span aria-hidden="true" data-icon="&#x25a8;"></span>
+//   <span class="screen-reader-text">RSS</span>
+// </a>",
+// 		"email": "jinglebot@email.com",
+// 		"github": "jinglebot",
+// 		"twitter": "@jinglebot",
+// 		"location": "Dublin, California"
+// 	},
 	"message": "Websites: beautiful + responsive + speedy + user-friendly = My specialty",
 	"skills": skills,
 	"photo": "images/me.jpg"
@@ -20,9 +30,12 @@ var bio = {
 bio.display = function() {
 	var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
+	var jumboformattedName = "<div>"+formattedName+"</div>";
 	$("#header").prepend(formattedRole);
-	$("#header").prepend(formattedName);
+	$("#header").prepend(jumboformattedName);
+
 	var formattedmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+	// var footermobile = HTMLmobile.replace("%data%", bio.footercontacts.mobile);
 	$("#topContacts").append(formattedmobile);
 	$("#footerContacts").append(formattedmobile);
 	var formattedemail = HTMLemail.replace("%data%", bio.contacts.email);
@@ -52,6 +65,8 @@ bio.display = function() {
 	if (bio.skills.length > 0) {
 		contactSkills();
 	}
+
+	$("#header").addClass("white-text");
 }
 
 bio.display();

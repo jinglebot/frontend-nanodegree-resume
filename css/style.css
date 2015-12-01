@@ -1,3 +1,23 @@
+/*colors
+navbar: rgba(169,3,41,1), transparent, darkgray
+navbar font: #f5ae23
+header background: gradient dark red
+name/h1: lightsalmon 70px, line height: 74px;
+contact: #f5ae23
+contact data: white
+message: white, 74px, line height 80px shadow: 0;
+body: moccasin, blanchedalmond, chocolate
+body font: darkred, lightsalmon
+let's connect bar: darkred
+let's connect font: orange
+footer background: crimson, darkgray
+footer: #f5ae23
+footer data: white, coral
+change image to circle
+*/
+
+
+
 body,
 div,
 ul,
@@ -58,7 +78,6 @@ h3,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
 
@@ -99,6 +118,7 @@ a {
   color: #f3f3f3;
   line-height: 48px;
   margin: auto;
+/*  text-shadow: 1px 1px 1px #888;*/
 }
 
 #skills-h3 {
@@ -131,11 +151,17 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-image: url(copper.jpg);
-  background-position: center;
-  background-size: cover;
+/*  background-color: gray;*/
+/*  background-image: url(snowflake.png);*/
+/*  background-image: url(jinglebot_3D.png);
+  background-position: right;
+  background-size: contain;
   background-repeat: no-repeat;
-  background-color: #484848;
+  background-color: #484848;*/
+
+background-image: -moz-linear-gradient(top, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%); /* FF3.6-15 */
+background-image: -webkit-linear-gradient(top, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background-image: linear-gradient(to bottom, rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
 }
 
 .flex-box {
@@ -168,6 +194,67 @@ img {
 
 span {
   padding: 5px;
+}
+
+[data-icon]:before {
+  font-family: icons;
+  content: attr(data-icon);
+  speak: none;
+}
+  /*
+.icon-alone {
+  display: inline-block;
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+*/
+
+/* NavBar nad Buttons */
+
+.navbar>.container .navbar-brand,
+.navbar-inverse .navbar-nav>li>a {
+  color: #f5ae23;
+}
+
+ .navbar {
+  border: none;
+  box-shadow: 0px 0px;
+  background-color: rgba(0,0,0,0.0);
+  background: transparent;
+}
+
+.navbar-static-top {
+  margin-bottom: 0;
+}
+
+.navbar-header {
+  background-size: contain;
+}
+
+span.glyphicon {
+  padding-top: 15px;
+}
+
+.btn {
+/*  background: url(gradient25.png);*/
+/*    background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.17, #96030A),
+    color-stop(0.54, #D42708),
+    color-stop(0.75, #AB0707)
+  );
+  background-image: -o-linear-gradient(bottom, #96030A 17%, #D42708 54%, #AB0707 75%);
+  background-image: -moz-linear-gradient(bottom, #96030A 17%, #D42708 54%, #AB0707 75%);
+  background-image: -webkit-linear-gradient(bottom, #96030A 17%, #D42708 54%, #AB0707 75%);
+  background-image: -ms-linear-gradient(bottom, #96030A 17%, #D42708 54%, #AB0707 75%);
+  background-image: linear-gradient(to bottom, #96030A 17%, #D42708 54%, #AB0707 75%);
+  margin-bottom: 10px;*/
 }
 
 #lets-connect {

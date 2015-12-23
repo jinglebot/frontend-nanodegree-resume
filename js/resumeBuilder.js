@@ -12,16 +12,13 @@ var bio = {
 		"twitter": "@jinglebot",
 		"location": "Dublin, California"
 	},
-// 	"footercontacts": {
-// 		"mobile": "<a href="#" class="icon-alone">
-//   <span aria-hidden="true" data-icon="&#x25a8;"></span>
-//   <span class="screen-reader-text">RSS</span>
-// </a>",
-// 		"email": "jinglebot@email.com",
-// 		"github": "jinglebot",
-// 		"twitter": "@jinglebot",
-// 		"location": "Dublin, California"
-// 	},
+	"contactIcons": {
+		"mobile": "<i class='fa fa-phone-square fa-2x'></i>",
+		"email": "<i class='fa fa-envelope-square fa-2x'></i>",
+		"github": "<i class='fa fa-github-square fa-2x'></i>",
+		"twitter": "<i class='fa fa-twitter-square fa-2x'></i>",
+		"location": "<i class='fa fa-globe fa-2x'></i>"
+ 	},
 	"message": "Websites: beautiful + responsive + speedy + user-friendly = My specialty",
 	"skills": skills,
 	"photo": "images/me.jpg"
@@ -35,24 +32,21 @@ bio.display = function() {
 	$("#header").prepend(jumboformattedName);
 
 	var formattedmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	// var footermobile = HTMLmobile.replace("%data%", bio.footercontacts.mobile);
 	$("#topContacts").append(formattedmobile);
-	$("#footerContacts").append(formattedmobile);
 	var formattedemail = HTMLemail.replace("%data%", bio.contacts.email);
 	$("#topContacts").append(formattedemail);
-	$("#footerContacts").append(formattedemail);
 	var formattedtwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	$("#topContacts").append(formattedtwitter);
-	$("#footerContacts").append(formattedtwitter);
 	var formattedgithub = HTMLgithub.replace("%data%", bio.contacts.github);
 	$("#topContacts").append(formattedgithub);
-	$("#footerContacts").append(formattedgithub);
 	var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedlocation);
 	var formattedbioPic = HTMLbioPic.replace("%data%", bio.photo);
-	$("#header").append(formattedbioPic);
+	var jumboformattedbioPic = "<div class='col-md-4'>"+formattedbioPic+"</div>";
+	$("#header").append(jumboformattedbioPic);
 	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.message);
-	$("#header").append(formattedwelcomeMsg);
+	var jumboformattedwelcomeMsg = "<div class='col-md-8'>"+formattedwelcomeMsg+"</div>";
+	$("#header").append(jumboformattedwelcomeMsg);
 
 	function contactSkills() {
 		$("#header").append(HTMLskillsStart);
@@ -67,6 +61,18 @@ bio.display = function() {
 	}
 
 	$("#header").addClass("white-text");
+
+	var footermobile = formattedmobile.replace("mobile", bio.contactIcons.mobile);
+	var footeremail = formattedemail.replace("email", bio.contactIcons.email);
+	var footertwitter = formattedtwitter.replace("twitter", bio.contactIcons.twitter);
+	var footergithub = formattedgithub.replace("github", bio.contactIcons.github);
+	var footerlocation = formattedlocation.replace("location", bio.contactIcons.location);
+
+	$("#footerContacts").append(footermobile);
+	$("#footerContacts").append(footeremail);
+	$("#footerContacts").append(footertwitter);
+	$("#footerContacts").append(footergithub);
+	$("#footerContacts").append(footerlocation);
 }
 
 bio.display();

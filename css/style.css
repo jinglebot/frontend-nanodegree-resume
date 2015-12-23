@@ -155,6 +155,12 @@ ul {
   padding: 10px;
   width: 200px;
   display: none;
+  margin:  auto 10px;
+  max-width: 100%;
+  border: 7px solid white;
+  -webkit-border-radius: 40%;
+  -moz-border-radius: 40%;
+  border-radius: 40%;
 }
 
 img {
@@ -174,6 +180,7 @@ span {
 #main {
   background-color: saddlebrown;
 }
+
 
 /* Nav Bars */
 
@@ -210,6 +217,26 @@ span {
   color: #fff;
   font-weight: bolder;
   background: transparent;
+}
+
+li .subnav {
+  display: none;
+  position: absolute;
+  width: 800px;
+  clear: both;
+  margin-left: 0;
+  float: left;
+  background: transparent;
+}
+
+/*li:hover> .subnav {
+  display: inline-block;
+}*/
+
+.subnav ul {
+  margin-left: 0;
+  float: left;
+  padding: 10px 0;
 }
 
 span.glyphicon {
@@ -294,4 +321,16 @@ span.glyphicon {
   .biopic {
     display: block;
   }
+}
+
+@media only screen and (max-width: 750px) {
+
+  .panel-group .panel-heading {
+    display: none;
+  }
+
+  #lets-connect {
+    display: inline-block;
+  }
+
 }

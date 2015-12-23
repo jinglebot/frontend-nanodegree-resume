@@ -27,6 +27,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Bootstrap-theme CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+  <!-- Bootstrap font awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Custom style -->
   <link href="css/style.css" rel="stylesheet">
 
@@ -75,15 +77,18 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div class="jumbotron">
       <div class="navbar navbar-default navbar-static-top">
         <div class="container">
+
           <div class="navbar-header">
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
               <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </button>
-            <a href="#" class="navbar-brand"><b>@jinglebot</b></a>
+            <a href="#" data-target=".subnav" data-toggle="collapse" class="navbar-brand"><b>@jinglebot</b></a>
           </div>
+
           <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="#">Home</a></li>
+              <li><a href="#" data-target=".subnav" data-toggle="collapse" class="parent-one-link">Contact Me</a></li>
               <li><a href="#workExperience" data-toggle="collapse">Work Experience</a></li>
               <li><a href="#projects" data-toggle="collapse">Projects</a></li>
               <li><a href="#education" data-toggle="collapse">Education</a></li>
@@ -95,7 +100,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
     <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+      <div class="col-md-12 subnav collapse">
+        <ul id="topContacts" class="flex-box"></ul>
+      </div>
     </div>
     <div style="clear: both;"></div>
   </div>
@@ -103,9 +110,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
   <div class="container">
     <div class="panel-group" id="accordion">
+
       <div class="panel panel-default">
         <div class="panel-heading">
-          <div class="panel-title" id="workExperienceHdr" data-target="#workExperience" data-toggle="collapse" data-parent="accordion">
+          <div class="panel-title" data-target="#workExperience" data-toggle="collapse" data-parent="accordion">
             <h1 class="orange-text">
               Work Experience
             </h1>
@@ -156,7 +164,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
             </h2>
           </div>
         </div>
-        <div class="panel-body collapse dark-gray" id="footerContacts"></div>
+        <div class="panel-body collapse saddlebrown" id="footerContacts"></div>
       </div>
 
     </div>

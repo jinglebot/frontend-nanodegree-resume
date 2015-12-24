@@ -41,15 +41,19 @@ bio.display = function() {
 	$("#topContacts").append(formattedgithub);
 	var formattedlocation = HTMLlocation.replace("%data%", bio.contacts.location);
 	$("#topContacts").append(formattedlocation);
+
 	var formattedbioPic = HTMLbioPic.replace("%data%", bio.photo);
-	var jumboformattedbioPic = "<div class='col-md-4'>"+formattedbioPic+"</div>";
-	$("#header").append(jumboformattedbioPic);
+	var jumboformattedbioPic = "<div>"+formattedbioPic+"</div>";
+	// $("#header").append(jumboformattedbioPic);
 	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.message);
-	var jumboformattedwelcomeMsg = "<div class='col-md-8'>"+formattedwelcomeMsg+"</div>";
-	$("#header").append(jumboformattedwelcomeMsg);
+	var jumboformattedwelcomeMsg = "<div>"+formattedwelcomeMsg+"</div>";
+	// $("#header").append(jumboformattedwelcomeMsg);
+	var jumboformattedbioPicwelcomeMsg = jumboformattedbioPic+jumboformattedwelcomeMsg;
+	$("#header").append("<div class='col-md-12 bioPicwelcomeMsg'>"+jumboformattedbioPicwelcomeMsg+"</div>");
 
 	function contactSkills() {
-		$("#header").append(HTMLskillsStart);
+		var jumboHTMLskillsStart = "<div class='col-sm-12 col-md-12'>"+HTMLskillsStart+"</div>";
+		$("#header").append(jumboHTMLskillsStart);
 		for (var skill = 0; skill < bio.skills.length; skill++) {
 			var formattedskills = HTMLskills.replace("%data%", bio.skills[skill]);
 			$("#skills:last").append(formattedskills);

@@ -105,6 +105,18 @@ a {
   display: none;
 }
 
+.bioPicwelcomeMsg {
+  display: flex;
+  padding: inherit;
+  align-items: center;
+}
+
+.bioPicwelcomeMsg div {
+  vertical-align: middle;
+  text-align: center;
+  align-items: center;
+}
+
 .orange {
   background-color: #f5ae23;
 }
@@ -152,12 +164,12 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
+  padding: 0;
   width: 200px;
   display: none;
   margin:  auto 10px;
   max-width: 100%;
-  border: 7px solid white;
+  border: 3px solid orange;
   -webkit-border-radius: 40%;
   -moz-border-radius: 40%;
   border-radius: 40%;
@@ -219,7 +231,8 @@ span {
   background: transparent;
 }
 
-li .subnav {
+li .subnav,
+li .footer {
   display: none;
   position: absolute;
   width: 800px;
@@ -227,16 +240,6 @@ li .subnav {
   margin-left: 0;
   float: left;
   background: transparent;
-}
-
-/*li:hover> .subnav {
-  display: inline-block;
-}*/
-
-.subnav ul {
-  margin-left: 0;
-  float: left;
-  padding: 10px 0;
 }
 
 span.glyphicon {
@@ -274,6 +277,12 @@ span.glyphicon {
 
 
 /* Media queries to handle various device widths */
+
+@media only screen and (orientation: portrait) {
+  .navbar-brand {
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 1024px) {
   #lets-connect {

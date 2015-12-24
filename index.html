@@ -59,8 +59,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 
-<body>
-  <div id="main">
+<body id="main">
+  <div>
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
@@ -88,7 +88,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
           <div class="collapse navbar-collapse navHeaderCollapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#" data-target=".subnav" data-toggle="collapse" class="parent-one-link">Contact Me</a></li>
+              <li><a href="#" data-target=".subnav" data-toggle="collapse">Contact Me</a></li>
               <li><a href="#workExperience" data-toggle="collapse">Work Experience</a></li>
               <li><a href="#projects" data-toggle="collapse">Projects</a></li>
               <li><a href="#education" data-toggle="collapse">Education</a></li>
@@ -104,7 +104,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <ul id="topContacts" class="flex-box"></ul>
       </div>
     </div>
-    <div style="clear: both;"></div>
   </div>
 
 
@@ -155,8 +154,20 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         <div id="mapDiv" class="panel-body collapse"></div>
       </div>
 
+    </div>
 
-      <div class="panel panel-default">
+    <div>
+      <span data-toggle="collapse" data-target=".footer" >
+        <h2 class="orange text-center">
+          Let's Connect
+        </h2>
+      </span>
+      <div class="footer collapse">
+        <ul id="footerContacts" class="flex-box"></ul>
+      </div>
+    </div>
+
+<!--       <div class="panel panel-default"> type="button" class="btn btn-default btn-lg dropdown-toggle" aria-label="Let's Connect" aria-haspopup="true" aria-expanded="true"  aria-labelledby="letsConnectBtn"
         <div class="panel-heading">
           <div class="panel-title" data-target="#footerContacts" data-toggle="collapse" data-parent="accordion">
             <h2 class="orange gray-text text-center">
@@ -165,9 +176,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
           </div>
         </div>
         <div class="panel-body collapse saddlebrown" id="footerContacts"></div>
-      </div>
+      </div> -->
 
-    </div>
   </div>
 </div>
 
